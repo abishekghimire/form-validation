@@ -18,11 +18,12 @@
     <div class="wrapper">
       <section class="form signin">
         <!-- <header>Js Validation</header> -->
-        <form action="#">
+        <form id="signinForm" action="#">
           <div class="error-text"></div>
           <div class="field input">
             <label for="email">Email</label>
-            <input type="text" name="email" placeholder="Enter your email" />
+            <input type="email" name="email" placeholder="Enter your email" />
+            <div class="email-feedback">Please enter a valid email format.</div>
           </div>
           <div class="field input">
             <label for="password">Password</label>
@@ -40,5 +41,6 @@
         <div class="link">New user?<a href="index.html"> Sign up now.</a></div>
       </section>
     </div>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

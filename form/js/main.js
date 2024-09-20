@@ -1,5 +1,5 @@
-import { emailValidation } from "./email-validation.js";
-import { showHidePassword } from "./password-show-hide.js";
+import { emailValidation } from "./emailValidation.js";
+import { showHidePassword } from "./passwordShowHide.js";
 const emailInput = document.querySelector(".form input[type = 'email']");
 const emailFeedback = document.querySelector(".email-feedback");
 const passwordField = document.querySelector(".form input[type= 'password']");

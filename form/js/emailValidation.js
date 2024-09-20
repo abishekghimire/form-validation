@@ -12,12 +12,22 @@ export function emailValidation(emailInput, emailFeedback) {
     }
   });
 
-  document.getElementById("signupForm").addEventListener("submit", (event) => {
+  const validateEmail = (event) => {
     const email = emailInput.value;
 
     if (!emailRegex.test(email)) {
       event.preventDefault();
       // showToast(invalidMsg, "orange");
     }
-  });
+  };
+  const signupForm = document.getElementById("signupForm");
+  const signinForm = document.getElementById("signinForm");
+
+  if (signinForm) {
+    signinForm.addEventListener("submit", validateEmail);
+  }
+
+  if (signupForm) {
+    signupForm.addEventListener("submit", validateEmail);
+  }
 }
