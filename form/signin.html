@@ -23,7 +23,9 @@
           <div class="field input">
             <label for="email">Email</label>
             <input type="email" name="email" placeholder="Enter your email" />
-            <div class="email-feedback">Please enter a valid email format.</div>
+            <div class="feedback email-feedback">
+              Please enter a valid email format.
+            </div>
           </div>
           <div class="field input">
             <label for="password">Password</label>
@@ -33,6 +35,9 @@
               placeholder="Enter your password"
             />
             <i class="fas fa-eye"></i>
+            <div class="feedback password-feedback">
+              Password must contain between 4 and 60 characters.
+            </div>
           </div>
           <div class="field button">
             <input type="submit" value="Sign In" />

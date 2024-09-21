@@ -3,9 +3,9 @@
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const invalidMsg = "Please enter valid email!";
 
-export function emailValidation(emailInput, emailFeedback) {
-  emailInput.addEventListener("input", () => {
-    if (emailRegex.test(emailInput.value)) {
+export function emailValidation(emailField, emailFeedback) {
+  emailField.addEventListener("input", () => {
+    if (emailRegex.test(emailField.value)) {
       emailFeedback.style.display = "none";
     } else {
       emailFeedback.style.display = "block";
@@ -13,7 +13,7 @@ export function emailValidation(emailInput, emailFeedback) {
   });
 
   const validateEmail = (event) => {
-    const email = emailInput.value;
+    const email = emailField.value;
 
     if (!emailRegex.test(email)) {
       event.preventDefault();

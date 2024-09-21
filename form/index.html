@@ -20,36 +20,54 @@
         <!-- <header>Js Validation</header> -->
         <form id="signupForm" action="#" enctype="multipart/form-data">
           <div class="error-text"></div>
-          <div class="field input">
+          <div class="field">
             <label for="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-            />
-            <div class="email-feedback">Please enter a valid email format.</div>
+            <div class="input">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+              <div class="feedback email-feedback">
+                Please enter a valid email format.
+              </div>
+            </div>
           </div>
-          <div class="field input">
+          <div class="field">
             <label for="dob">Date of birth</label>
-            <input
-              type="text"
-              name="dob"
-              placeholder="Enter your DOB"
-              required
-              onfocus="changeToDate(this)"
-              onblur="resetInputType(this)"
-            />
+            <div class="input">
+              <input
+                type="text"
+                name="dob"
+                placeholder="Enter your DOB"
+                required
+                onfocus="changeToDate(this)"
+                onblur="resetInputType(this)"
+              />
+              <div class="feedback dob-feedback">
+                Age must be greater than 16.
+              </div>
+            </div>
           </div>
-          <div class="field input">
+          <div class="field">
             <label for="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter your password"
-              required
-            />
-            <i class="fas fa-eye"></i>
+            <div class="input">
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+              />
+              <i class="fas fa-eye"></i>
+              <div class="feedback password-length-feedback">
+                Password must contain between 4 and 60 characters.
+              </div>
+              <div class="feedback password-set-feedback">
+                Password must contain atleast one uppercase and special
+                character.
+              </div>
+            </div>
           </div>
 
           <div class="field button">
