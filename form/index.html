@@ -40,13 +40,19 @@
               <input
                 type="text"
                 name="dob"
-                placeholder="Enter your DOB"
+                placeholder="YYYY-MM-DD"
                 required
                 onfocus="changeToDate(this)"
                 onblur="resetInputType(this)"
               />
-              <div class="feedback dob-feedback">
+              <div class="feedback age-limit-feedback">
                 Age must be greater than 16.
+              </div>
+              <div class="feedback invalid-date-feedback">
+                Enter date in YYYY-MM-DD format.
+              </div>
+              <div class="feedback future-date-feedback">
+                Date of birth should not be in future.
               </div>
             </div>
           </div>
@@ -81,7 +87,7 @@
     </div>
     <script>
       function changeToDate(input) {
-        input.type = "date";
+        input.type = "text";
       }
 
       function resetInputType(input) {
